@@ -15,7 +15,7 @@ public class JoystickPlayer : MonoBehaviour
         rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
         var impulse = slider.Vertical * Mathf.Deg2Rad * rb.inertia;
         rb.AddTorque(impulse, ForceMode2D.Impulse);
-        if (rb.velocity.sqrMagnitude < 0.005)
+        if (rb.velocity.sqrMagnitude < 0.0005)
         {
             rb.velocity = Vector2.zero;
         }
