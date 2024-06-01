@@ -94,13 +94,13 @@ public class AreaChecker
             point.x += gridSize;
             point.y = boxMinY - 0.00001f;
         }
-/*
-        Debug.Log("A: " + pointsInA + " B: " + pointsInB + " AB: " + pointsInAB);
+
+        //Debug.Log("A: " + pointsInA + " B: " + pointsInB + " AB: " + pointsInAB);
         
         Debug.DrawLine(new Vector3(boxMinX, boxMinY, 0), new Vector3(boxMinX, boxMaxY, 0), Color.green, 10f);
         Debug.DrawLine(new Vector3(boxMinX, boxMaxY, 0), new Vector3(boxMaxX, boxMaxY, 0), Color.blue, 10f);
         Debug.DrawLine(new Vector3(boxMaxX, boxMaxY, 0), new Vector3(boxMaxX, boxMinY, 0), Color.red, 10f);
-        Debug.DrawLine(new Vector3(boxMaxX, boxMinY, 0), new Vector3(boxMinX, boxMinY, 0), Color.white, 10f);*/
+        Debug.DrawLine(new Vector3(boxMaxX, boxMinY, 0), new Vector3(boxMinX, boxMinY, 0), Color.white, 10f);
 
         float minCoverPoints = pointsInB * minCover * minCover;
         float similarity = Mathf.Clamp((2 * pointsInAB - pointsInA) / minCoverPoints, 0, 1);

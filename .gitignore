@@ -6,3 +6,5 @@ Library/
 Logs/
 Temp/
 UserSettings/
+.vs/
+obj/

@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
     public GameObject goal;
     public GameObject player;
 
-    public float maxTime;
+    public float gameplayTime = 120;
     public TextMeshProUGUI timerText;
     private float currentTime;
 
@@ -67,9 +67,10 @@ public class LevelManager : MonoBehaviour
 
         if (gameState == GameState.Gameplay)
         {
-            if (currentTime < 1)
+            if (currentTime < 0)
             {
                 EndGameplay();
+                return;
             }
 
             currentTime -= Time.deltaTime;
@@ -85,9 +86,8 @@ public class LevelManager : MonoBehaviour
         {
             SwitchGameState(GameState.Gameplay);
             mainCamera.followPlayer = true;
+            currentTime = gameplayTime;
         }
-
-        currentTime = maxTime;
     }
 
     public void EndGameplay()
