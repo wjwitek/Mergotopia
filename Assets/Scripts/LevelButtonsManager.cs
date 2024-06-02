@@ -5,11 +5,10 @@ using UnityEngine.Assertions;
 
 public class LevelButtonsManager : MonoBehaviour
 {
-    private LevelButton[] levelButtons;
+    public LevelButton[] levelButtons;
 
     void Awake()
     {
-        levelButtons = GetComponentsInChildren<LevelButton>();
         Assert.IsTrue(levelButtons.Length > 0, "There are no levels set");
 
         for (int i = 1; i < levelButtons.Length; i++)
