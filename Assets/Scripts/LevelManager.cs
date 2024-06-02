@@ -118,6 +118,17 @@ public class LevelManager : MonoBehaviour
         resultViewUI.SetActive(true);
     }
 
+    public void ShowGoal(GameObject goal)
+    {
+        goal.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z + 1);
+        goal.SetActive(true);
+    }
+
+    public void StopShowingGoal(GameObject goal)
+    {
+        goal.SetActive(false);
+    }
+
     public int CalculateStars()
     {
         if (score == 100)
