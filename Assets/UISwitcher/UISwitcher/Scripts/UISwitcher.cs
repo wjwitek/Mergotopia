@@ -33,7 +33,7 @@ namespace UISwitcher {
 			backgroundColor = onColor;
 		}
 
-		private void SetOff() {
+        private void SetOff() {
 			SetAnchors(_min);
 			backgroundColor = offColor;
 		}

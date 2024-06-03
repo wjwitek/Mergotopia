@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class ParticleChange : MonoBehaviour
+public class MusicChange : MonoBehaviour
 {
     public UISwitcher.UISwitcher switcher;
-    public ParticleSystem particles;
+    public AudioSource music;
 
     void Start()
     {
@@ -17,13 +17,6 @@ public class ParticleChange : MonoBehaviour
 
     void ChangeSetting()
     {
-        if (switcher.isOn) {
-            particles.Play();
-        }
-        else
-        {
-            particles.Pause();
-            particles.Clear();
-        }
+        music.mute = !switcher.isOn;
     }
 }
